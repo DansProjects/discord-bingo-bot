@@ -1,5 +1,6 @@
 import discord
 from WowBingo import WowBingo
+import config
 
 client = discord.Client()
 bingo = WowBingo()
@@ -24,4 +25,4 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
-client.run('MzI0OTMzMzg2Nzk4MTA0NTc2.DCQ5Tg.4h7PD3p4v8IArrRm9B_TbgfOQa8')
+client.run(config.auth['token'])
