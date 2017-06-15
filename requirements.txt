@@ -1,0 +1,2 @@
+discord.py==0.16.8
+Pillow==4.1.1
