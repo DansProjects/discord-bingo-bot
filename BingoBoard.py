@@ -30,8 +30,10 @@ class BingoBoard:
             x = 100
             y = y + 260
 
+        file_dir = 'bingo_boards/'
+
         rand_file_int = randint(0, 1333337);
-        file_name = file_name+'_'+str(rand_file_int)+'.png'
+        file_name = file_dir+file_name+'_'+str(rand_file_int)+'.png'
 
         # save the blank canvas to a file
         canvas.save(file_name, "PNG")
