@@ -12,7 +12,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('?bingo'):
-        if(message.author == 'LinaeSostra'):
+        if(message.author.username == 'LinaeSostra'):
             msg = 'Here\'s your bingo card you trash panda {0.author.menthion}'.format(message)
         else:
             msg = 'Hello {0.author.mention}'.format(message)
