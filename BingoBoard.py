@@ -17,13 +17,13 @@ class BingoBoard:
         #approx 15 characers per line
         canvas = Image.open("bingo_template.png")
         draw = ImageDraw.Draw(canvas)
-        
+
         initialXPosition = 100
         initialYPosition = 450
-        
+
         x = initialXPosition
         y = initialYPosition
-        
+
         cellWidth = 265
         cellHeight = 260
         margin = 10
