@@ -28,7 +28,6 @@ class BingoBoard:
         for row in self.bingo_board:
 
             for cell in row:
-                #make sure no line goes past 13 characters
                 text = textwrap.fill(cell[0], 13)
                 draw.text((x, y), text, 'blue', font)
                 x += cellWidth
