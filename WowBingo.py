@@ -33,13 +33,10 @@ class WowBingo:
         row = []
 
         for option in option_pool:
-
             if len(row) == self.grid_size:
                 board.append(row)
                 row = []
-
             row.append(self.bingo_options[option])
-
         board.append(row)
 
         return board
