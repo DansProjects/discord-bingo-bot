@@ -12,11 +12,15 @@ async def on_message(message):
         return
 
     if message.content.startswith('?bingo'):
-        msg = 'Hello {0.author.mention}'.format(message)
+        if(message.author == 'LinaeSostra'):
+            msg = 'Here\'s your bingo card you trash panda {0.author.menthion}'.format(message)
+        else:
+            msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
         await client.send_message(message.channel, '-------------')
         #generate and send image to discord
         await client.send_file(message.channel, bingo.generate_board())
+
     elif message.content.startswith('?about'):
         msg = 'Bingo bot for dank memes...by Dan'
         await client.send_message(message.channel, msg)
