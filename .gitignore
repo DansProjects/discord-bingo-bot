@@ -2,3 +2,5 @@
 config.py
 bingo_boards/*
 __pycache__/*
+*.pyc
+**.pyc
