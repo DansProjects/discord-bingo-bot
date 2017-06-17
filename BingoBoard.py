@@ -10,11 +10,8 @@ class BingoBoard:
 
     def generate_board_image(self, file_name = 'bingo'):
 
-        #set font to comic sans for maximum meme
         font = ImageFont.truetype("fonts/comic-sans.ttf", 28, encoding="unic")
 
-        #boxes are 250px by 250px with 10px margins
-        #approx 15 characers per line
         canvas = Image.open("bingo_template.png")
         draw = ImageDraw.Draw(canvas)
 
@@ -44,7 +41,6 @@ class BingoBoard:
         rand_file_int = randint(0, 1333337);
         file_name = file_dir+file_name+'_'+str(rand_file_int)+'.png'
 
-        # save the blank canvas to a file
         canvas.save(file_name, "PNG")
 
         return file_name
