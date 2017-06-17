@@ -1,6 +1,8 @@
 from PIL import Image,ImageDraw,ImageFont
 import textwrap
 from random import randint
+
+
 class BingoBoard:
 
     def __init__(self, bingo_board):

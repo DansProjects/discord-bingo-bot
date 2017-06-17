@@ -17,7 +17,6 @@ async def on_message(message):
         else:
             msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-        await client.send_message(message.channel, '-------------')
         #generate and send image to discord
         await client.send_file(message.channel, bingo.generate_board())
 
