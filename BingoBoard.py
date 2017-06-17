@@ -15,9 +15,16 @@ class BingoBoard:
         #approx 15 characers per line
         canvas = Image.open("bingo_template.png")
         draw = ImageDraw.Draw(canvas)
-
-        x = 100
-        y = 450
+        
+        initialXPosition = 100
+        initialYPosition = 450
+        
+        x = initialXPosition
+        y = initialYPosition
+        
+        cellWidth = 265
+        cellHeight = 260
+        margin = 10
 
         for row in self.bingo_board:
 
@@ -25,10 +32,10 @@ class BingoBoard:
                 #make sure no line goes past 13 characters
                 text = textwrap.fill(cell[0], 13)
                 draw.text((x, y), text, 'blue', font)
-                x = x + 265
+                x = x + cellWidth
 
-            x = 100
-            y = y + 260
+            x = initialXPosition
+            y = y + cellHeight
 
         file_dir = 'bingo_boards/'
 
