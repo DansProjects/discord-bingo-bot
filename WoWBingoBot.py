@@ -7,7 +7,6 @@ bingo = WowBingo()
 
 @client.event
 async def on_message(message):
-    #do not respond to self - causing recursive fail
     if message.author == client.user:
         return
 
@@ -17,7 +16,6 @@ async def on_message(message):
         else:
             msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-        #generate and send image to discord
         await client.send_file(message.channel, bingo.generate_board())
 
     elif message.content.startswith('?about'):
