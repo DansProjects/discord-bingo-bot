@@ -8,7 +8,7 @@ class BingoBoard:
     def __init__(self, bingo_board):
         self.bingo_board = bingo_board
 
-    def generate_board_image(self, file_name = 'bingo'):
+    def generate_board_image(self, file_name='bingo', user_name='anon'):
 
         y_position = 450
         cell_width = 265
@@ -27,7 +27,7 @@ class BingoBoard:
             y_position += cell_height
 
         rand_file_int = randint(0, 1333337);
-        file_name = 'bingo_boards/' + file_name + '_' + str(rand_file_int) + '.png'
+        file_name = 'bingo_boards/' + file_name + '_' + user_name + '_' + str(rand_file_int) + '.png'
         canvas.save(file_name, "PNG")
 
         return file_name
