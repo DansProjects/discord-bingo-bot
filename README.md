@@ -12,4 +12,4 @@ python BingoTest.py
 ### Docker
 `docker build -t bingobot .`
 
-`docker run --rm -v $(pwd)/bingo_boards:/opt/bingobot/bingo_boards bigobot`
+`docker run --rm -v $(pwd)/bingo_boards:/opt/bingobot/bingo_boards bingobot`
