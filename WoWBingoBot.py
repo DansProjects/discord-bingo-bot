@@ -11,7 +11,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('?bingo'):
+    if message.content.startswith('?bingo '):
 
         msg = 'Hello {0.author.mention}'.format(message)
 
@@ -23,7 +23,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         await client.send_file(message.channel, bingo.generate_board(message.author.name))
 
-    elif message.content.startswith('?about'):
+    elif message.content.startswith('?about '):
         msg = 'Bingo bot for dank memes...by Dan'
         await client.send_message(message.channel, msg)
 
