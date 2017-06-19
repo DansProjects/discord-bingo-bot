@@ -10,7 +10,8 @@ bingo = WowBingo()
 async def on_message(message):
     if message.author == client.user:
         return
-
+    """ There's a space in the keyword commands to ensure future related commands.
+    i.e. ?bingo-save, ?bingo-cone """
     if message.content.startswith('?bingo '):
 
         msg = 'Hello {0.author.mention}'.format(message)
