@@ -15,13 +15,13 @@ async def on_message(message):
 
         msg = 'Hello {0.author.mention}'.format(message)
 
-        if message.author == 'LinaeSostra' :
+        if message.author.name == 'LinaeSostra' :
             msg = 'Here\'s your bingo card you trash panda {0.author.mention}'.format(message)
-        elif message.author == 'Netflixnheal':
+        elif message.author.name == 'Netflixnheal':
             msg = 'Here you go master: '
 
         await client.send_message(message.channel, msg)
-        await client.send_file(message.channel, bingo.generate_board(message.author))
+        await client.send_file(message.channel, bingo.generate_board(message.author.name))
 
     elif message.content.startswith('?about'):
         msg = 'Bingo bot for dank memes...by Dan'
