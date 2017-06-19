@@ -26,13 +26,15 @@ class BingoBoard:
         
         cellWidth = 265
         cellHeight = 260
+
         margin = 10
+        maxCharLength = 15
 
         for row in self.bingo_board:
 
             for cell in row:
                 #make sure no line goes past 13 characters
-                text = textwrap.fill(cell[0], 13)
+                text = textwrap.fill(cell[0], maxCharLength)
                 draw.text((x, y), text, 'blue', font)
                 x = x + cellWidth
 
