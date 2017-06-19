@@ -12,12 +12,16 @@ async def on_message(message):
         return
 
     if message.content.startswith('?bingo'):
-        if(message.author.username == 'LinaeSostra'):
+
+        msg = 'Hello {0.author.mention}'.format(message)
+
+        if message.author == 'LinaeSostra' :
             msg = 'Here\'s your bingo card you trash panda {0.author.mention}'.format(message)
-        else:
-            msg = 'Hello {0.author.mention}'.format(message)
+        elif message.author == 'Netflixnheal':
+            msg = 'Here you go master: '
+
         await client.send_message(message.channel, msg)
-        await client.send_file(message.channel, bingo.generate_board(message.author.username))
+        await client.send_file(message.channel, bingo.generate_board(message.author))
 
     elif message.content.startswith('?about'):
         msg = 'Bingo bot for dank memes...by Dan'
