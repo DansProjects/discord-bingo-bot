@@ -14,7 +14,7 @@ class BingoBoard:
         cell_width = 265
         cell_height = 260
         margin = 10
-        font = ImageFont.truetype("fonts/comic-sans.ttf", 28, encoding="unic")
+        font = ImageFont.truetype("fonts/ComicRelief-Bold.ttf", 28, encoding="unic")
         canvas = Image.open("bingo_template.png")
         draw = ImageDraw.Draw(canvas)
 
